@@ -1,0 +1,11 @@
+{
+  "name": "and-gate-demo",
+  "topModule": "and_gate_tb",
+  "sources": [
+    "and_gate.v",
+    "and_gate_tb.v"
+  ],
+  "compilerFlags": [
+    "-g2012"
+  ]
+}

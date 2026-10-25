@@ -1,0 +1,11 @@
+{
+  "name": "multiplexer-8x1-project",
+  "topModule": "mux8to1_tb",
+  "sources": [
+    "mux8to1.v",
+    "mux8to1_tb.v"
+  ],
+  "compilerFlags": [
+    "-g2012"
+  ]
+}

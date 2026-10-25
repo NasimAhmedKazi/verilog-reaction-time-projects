@@ -1,0 +1,7 @@
+{
+  "rapidrtl.schematic.detailLevel": "high",
+  "rapidrtl.schematic.readableNames": true,
+  "workbench.editorAssociations": {
+    "*.vcd": "wavetrace.vcd"
+  }
+}

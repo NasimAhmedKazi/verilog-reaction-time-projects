@@ -1,0 +1,11 @@
+{
+  "name": "reaction-time-project",
+  "topModule": "reaction_time_game_tb",
+  "sources": [
+    "reaction_time_game.v",
+    "reaction_time_game_tb.v"
+  ],
+  "compilerFlags": [
+    "-g2012"
+  ]
+}

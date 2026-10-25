@@ -1,0 +1,72 @@
+{
+  "name": "verilog-ide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A local-first Verilog IDE for Icarus Verilog",
+  "author": "Nasim Ahmed Kazi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NasimAhmedKazi/verilog-reaction-time-projects.git"
+  },
+  "main": "dist-electron/electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
+    "web:dev": "concurrently -k \"npm:dev:renderer\" \"npm:web:server:dev\"",
+    "web:server:dev": "npm run build:electron && node dist-electron/electron/web-server.js --dev",
+    "web": "npm run build && node dist-electron/electron/web-server.js",
+    "web:server": "node dist-electron/electron/web-server.js",
+    "dev:renderer": "vite --host 127.0.0.1",
+    "dev:electron": "wait-on tcp:127.0.0.1:5173 && npm run build:electron && VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .",
+    "build": "npm run build:electron && vite build",
+    "build:electron": "tsc -p tsconfig.electron.json",
+    "typecheck": "tsc --noEmit -p tsconfig.renderer.json && tsc --noEmit -p tsconfig.electron.json",
+    "test": "vitest run --config vitest.config.ts",
+    "package:mac": "npm run build && electron-builder --mac --publish never"
+  },
+  "build": {
+    "appId": "com.nasimahmed.verilogide",
+    "productName": "Verilog IDE",
+    "files": [
+      "renderer-dist/**",
+      "dist-electron/**",
+      "sample-project/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "sample-project",
+        "to": "sample-project",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.developer-tools"
+    }
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "lucide-react": "^0.468.0",
+    "monaco-editor": "^0.52.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8",
+    "wait-on": "^8.0.1"
+  }
+}

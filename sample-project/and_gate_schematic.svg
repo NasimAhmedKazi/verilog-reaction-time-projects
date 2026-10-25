@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title description">
+  <title id="title">and_gate RTL schematic</title>
+  <desc id="description">Inputs A and B connect to a two-input AND gate. Its output is Y.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d7dee8"/>
+    </pattern>
+    <style>
+      .wire { fill: none; stroke: #2463a6; stroke-width: 4; stroke-linecap: square; }
+      .symbol { fill: #fff; stroke: #27364b; stroke-width: 4; stroke-linejoin: round; }
+      .port { fill: #fff; stroke: #2463a6; stroke-width: 4; }
+      .label { fill: #172334; font: 600 22px Inter, "Segoe UI", Arial, sans-serif; }
+      .small { fill: #64748b; font: 14px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 1.5px; }
+      .gate-label { fill: #334155; font: 600 18px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="560" fill="#f8fafc"/>
+  <rect width="1000" height="560" fill="url(#grid)"/>
+  <rect x="28" y="28" width="944" height="504" rx="8" fill="#fff" fill-opacity=".82" stroke="#cbd5e1" stroke-width="2"/>
+
+  <text x="64" y="82" class="small">RTL SCHEMATIC</text>
+  <text x="64" y="118" class="label">and_gate</text>
+  <line x1="64" y1="142" x2="936" y2="142" stroke="#dbe3ec" stroke-width="2"/>
+
+  <text x="174" y="234" class="label" text-anchor="end">A</text>
+  <text x="174" y="354" class="label" text-anchor="end">B</text>
+  <text x="826" y="302" class="label">Y</text>
+  <text x="520" y="438" class="small" text-anchor="middle">2-INPUT AND</text>
+
+  <path class="wire" d="M 194 226 H 390 V 250 H 440"/>
+  <path class="wire" d="M 194 346 H 390 V 330 H 440"/>
+  <path class="wire" d="M 620 290 H 806"/>
+
+  <path class="symbol" d="M 440 210 H 520 A 100 80 0 0 1 520 370 H 440 Z"/>
+
+  <circle class="port" cx="194" cy="226" r="7"/>
+  <circle class="port" cx="194" cy="346" r="7"/>
+  <circle class="port" cx="806" cy="290" r="7"/>
+</svg>

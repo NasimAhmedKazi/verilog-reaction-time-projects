@@ -1,0 +1,63 @@
+$date
+	Sat Oct 24 21:29:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux4to1_tb $end
+$var wire 1 ! data_out $end
+$var reg 4 " data_in [3:0] $end
+$var reg 2 # select [1:0] $end
+$scope module uut $end
+$var wire 4 $ data_in [3:0] $end
+$var wire 1 ! data_out $end
+$var wire 1 % not_s0 $end
+$var wire 1 & not_s1 $end
+$var wire 2 ' select [1:0] $end
+$var wire 1 ( term0 $end
+$var wire 1 ) term1 $end
+$var wire 1 * term2 $end
+$var wire 1 + term3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0+
+0*
+0)
+0(
+b0 '
+1&
+1%
+b1010 $
+b0 #
+b1010 "
+0!
+$end
+#10000
+1!
+0%
+1)
+b1 #
+b1 '
+#20000
+0!
+0&
+1%
+0)
+b10 #
+b10 '
+#30000
+1!
+0%
+1+
+b11 #
+b11 '
+#40000

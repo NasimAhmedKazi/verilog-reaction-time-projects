@@ -1,0 +1,13 @@
+{
+  "name": "reaction-time-enhanced-project",
+  "topModule": "reaction_time_game_tb",
+  "sources": [
+    "button_conditioner.v",
+    "seven_segment_display.v",
+    "reaction_time_game.v",
+    "reaction_time_game_tb.v"
+  ],
+  "compilerFlags": [
+    "-g2012"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "multiplexer-project",
+  "topModule": "mux4to1_tb",
+  "sources": [
+    "mux4to1.v",
+    "mux4to1_tb.v"
+  ],
+  "compilerFlags": [
+    "-g2012"
+  ]
+}
